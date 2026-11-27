@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2b1070" />
+  <title>Your group · Bill Splitting Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<main class="app">
+  <p class="loading" id="loading">Loading…</p>
+  <div class="auth center hidden" id="content">
+    <h1 class="title" id="greeting">Hi there</h1>
+    <p class="subtitle">Start a group for your room, or join one with a link.</p>
+    <form class="card left" id="create-form" novalidate>
+      <h2>Create a group</h2>
+      <div class="field"><label for="gname">Group name</label>
+        <input class="plain-input" id="gname" placeholder="e.g. Room 12B" maxlength="60" /></div>
+      <p class="hint spaced">You become the admin and get a link to invite roommates.</p>
+      <button class="btn" type="submit" id="create-btn">Create group</button>
+    </form>
+    <form class="card left" id="join-form" novalidate>
+      <h2>Join with a link</h2>
+      <div class="field"><label for="glink">Group link</label>
+        <input class="plain-input" id="glink" placeholder="Paste the group link" /></div>
+      <button class="btn spaced-top" type="submit" id="join-btn">Join group</button>
+    </form>
+    <div class="error" id="err" role="alert"></div>
+    <button class="link small" id="logout" type="button">Log out</button>
+  </div>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script type="module" src="js/pages/group-setup.js"></script>
+</body>
+</html>

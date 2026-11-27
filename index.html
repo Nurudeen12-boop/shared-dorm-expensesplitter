@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2b1070" />
+  <title>Welcome · Bill Splitting Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<main class="app gradient-soft center">
+  <div class="auth">
+    <h1 class="title underline self-center">Welcome</h1>
+    <p class="subtitle">Bill Splitting Calculator</p>
+    <svg class="logo" viewBox="0 0 96 96" aria-hidden="true">
+        <path d="M10 8h40v70l-6-4-6 4-7-4-7 4-7-4-7 4V8z" fill="#f4eed8"/>
+        <path d="M18 22h24M18 32h24M18 42h16" stroke="#9d93c9" stroke-width="3" stroke-linecap="round"/>
+        <rect x="40" y="34" width="38" height="50" rx="6" fill="#c9d4f5"/>
+        <rect x="46" y="40" width="26" height="10" rx="2" fill="#fff"/>
+        <g fill="#4a3aa8"><circle cx="50" cy="59" r="3"/><circle cx="59" cy="59" r="3"/><circle cx="68" cy="59" r="3"/>
+        <circle cx="50" cy="69" r="3"/><circle cx="59" cy="69" r="3"/><circle cx="68" cy="69" r="3"/>
+        <circle cx="50" cy="78" r="3"/><circle cx="59" cy="78" r="3"/><circle cx="68" cy="78" r="3"/></g>
+        <path d="M82 8l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="none" stroke="#fff" stroke-width="2"/>
+      </svg>
+    <h2 class="title underline self-center how">How it works</h2>
+    <div class="steps">
+      <div class="step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><path d="M6 3h12v18l-2.5-1.5L13 21l-2.5-1.5L8 21l-2-1.5V3z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><div><b><span class="num">1</span>Add your bill</b><span class="d">Enter the total amount</span></div></div>
+      <div class="step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="9" r="2.3"/><circle cx="19" cy="9" r="2.3"/><path d="M6 20c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5M1 18c0-2.5 1.7-4 4-4M23 18c0-2.5-1.7-4-4-4"/></svg><div><b><span class="num">2</span>Add people</b><span class="d">Add friends to split with</span></div></div>
+      <div class="step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><path d="M4 20l7-7M4 20v-5M4 20h5M20 4l-7 7M20 4v5M20 4h-5M4 4l7 7M4 4v5M4 4h5M20 20l-7-7M20 20v-5M20 20h-5"/></svg><div><b><span class="num">3</span>Split &amp; share</b><span class="d">See who owes what &amp; share the result</span></div></div>
+    </div>
+    <a class="btn" href="login.html">Get Started →</a>
+    <p class="tagline">• Quick · Fair · Easy •</p>
+  </div>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script type="module" src="js/pages/welcome.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2b1070" />
+  <title>Forgot password · Bill Splitting Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<main class="app center">
+  <form class="auth center forgot" id="forgot-form" novalidate>
+    <h1 class="title">Forgot Password?</h1>
+    <p class="subtitle">Bill Splitting Calculator</p>
+    <p class="lead">No worries. Enter your email and we'll send you a reset link to get back into your account.</p>
+    <div class="field"><label for="email">Email</label>
+      <div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required /></div></div>
+    <div class="error" id="err" role="alert"></div>
+    <div class="success" id="ok" role="status"></div>
+    <button class="btn" type="submit" id="submit">Reset password</button>
+    <p><a class="link" href="login.html">← Back to login</a></p>
+    <p class="hint">Check your inbox (and spam folder) for the reset link.</p>
+  </form>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script type="module" src="js/pages/forgot.js"></script>
+</body>
+</html>

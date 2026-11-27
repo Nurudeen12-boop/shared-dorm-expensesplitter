@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2b1070" />
+  <title>Login · Bill Splitting Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<main class="app gradient center">
+  <form class="auth" id="login-form" novalidate>
+    <h1 class="title underline self-center">Welcome Back</h1>
+    <p class="subtitle">Bill Splitting Calculator</p>
+    <svg class="logo" viewBox="0 0 96 96" aria-hidden="true">
+        <path d="M10 8h40v70l-6-4-6 4-7-4-7 4-7-4-7 4V8z" fill="#f4eed8"/>
+        <path d="M18 22h24M18 32h24M18 42h16" stroke="#9d93c9" stroke-width="3" stroke-linecap="round"/>
+        <rect x="40" y="34" width="38" height="50" rx="6" fill="#c9d4f5"/>
+        <rect x="46" y="40" width="26" height="10" rx="2" fill="#fff"/>
+        <g fill="#4a3aa8"><circle cx="50" cy="59" r="3"/><circle cx="59" cy="59" r="3"/><circle cx="68" cy="59" r="3"/>
+        <circle cx="50" cy="69" r="3"/><circle cx="59" cy="69" r="3"/><circle cx="68" cy="69" r="3"/>
+        <circle cx="50" cy="78" r="3"/><circle cx="59" cy="78" r="3"/><circle cx="68" cy="78" r="3"/></g>
+        <path d="M82 8l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="none" stroke="#fff" stroke-width="2"/>
+      </svg>
+    <h2 class="left-h">Login</h2>
+    <div class="field"><label for="email">Email</label>
+      <div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required /></div></div>
+    <div class="field"><label for="pw">Password</label>
+      <div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><input id="pw" type="password" autocomplete="current-password" placeholder="Your password" required /></div></div>
+    <div class="linkrow"><a class="link small" href="forgot.html">Forgot Password?</a></div>
+    <div class="error" id="err" role="alert"></div>
+    <button class="btn" type="submit" id="submit">Login</button>
+    <div class="divider">OR</div>
+    <div class="field"><label for="link">Join via group link</label>
+      <input class="plain-input" id="link" placeholder="Paste the group link" /></div>
+    <p class="hint hidden" id="join-hint">Group link saved. Log in or sign up to join your group.</p>
+    <p>New here? <a class="link" href="signup.html">Sign up</a></p>
+    <p class="tagline">• Quick · Fair · Easy •</p>
+  </form>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script type="module" src="js/pages/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2b1070" />
+  <title>History · Bill Splitting Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<main class="app">
+  <p class="loading" id="loading">Loading…</p>
+  <div id="content" class="hidden">
+    <header class="topbar">
+      <button class="icon-btn" id="menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <span></span><span></span>
+    </header>
+    <div class="history-head">
+      <h1>History</h1>
+      <button class="chip" id="filterBtn" type="button" aria-expanded="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M3 4h18l-7 8v7l-4 2v-9L3 4z" fill="currentColor"/></svg> Filter</button>
+    </div>
+    <div id="panel">
+      <p class="bold">Filters:</p>
+      <div class="chips" role="group" aria-label="Filter expenses">
+        <button class="chip on" type="button" data-f="all" aria-pressed="true"><span class="chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 11v6" stroke="#fff"/><circle cx="12" cy="7.5" r=".7" fill="#fff" stroke="#fff"/></svg></span>All</button>
+        <button class="chip off" type="button" data-f="unpaid" aria-pressed="false"><span class="chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 11v6" stroke="#fff"/><circle cx="12" cy="7.5" r=".7" fill="#fff" stroke="#fff"/></svg></span>Unpaid</button>
+        <button class="chip off" type="button" data-f="settled" aria-pressed="false"><span class="chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 11v6" stroke="#fff"/><circle cx="12" cy="7.5" r=".7" fill="#fff" stroke="#fff"/></svg></span>Settled</button>
+      </div>
+      <label class="sortline">Sort:
+        <select id="sort" aria-label="Sort expenses">
+          <option value="recent">Most recent</option>
+          <option value="oldest">Oldest first</option>
+          <option value="highest">Highest amount</option>
+        </select>
+      </label>
+    </div>
+
+    <h2 class="section-title">Past Expenses</h2>
+    <div id="list"></div>
+    <span class="summary-pill" id="summary"></span>
+    <p class="footnote">Tap an entry to view details</p>
+
+    <section id="payments-section" class="hidden">
+      <h2 class="section-title top-gap">Recorded payments</h2>
+      <div class="card" id="payments"></div>
+    </section>
+  </div>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script type="module" src="js/pages/history.js"></script>
+</body>
+</html>

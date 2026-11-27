@@ -1,0 +1,11 @@
+{
+  "name": "shared-dorm-expensesplitter",
+  "version": "1.0.0",
+  "description": "Shared dorm expense splitter - HTML/CSS/JS front end, Firebase back end, Vercel hosting",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "serve": "npx serve ."
+  }
+}

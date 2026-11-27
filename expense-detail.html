@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2b1070" />
+  <title>Expense · Bill Splitting Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<main class="app">
+  <p class="loading" id="loading">Loading…</p>
+  <div id="content" class="hidden">
+    <header class="topbar">
+      <a class="icon-btn" href="history.html" aria-label="Back to history"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+      <h1>Expense</h1><span></span>
+    </header>
+    <section class="card">
+      <p class="muted" id="e-date"></p>
+      <h2 class="tight" id="e-name"></h2>
+      <div class="detail-total" id="e-total"></div>
+      <p class="paidby" id="e-paidby"></p>
+      <span class="badge fit" id="e-badge"></span>
+    </section>
+    <section class="card">
+      <h2>Shares</h2>
+      <div id="shares"></div>
+    </section>
+    <div id="actions"></div>
+  </div>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script type="module" src="js/pages/expense-detail.js"></script>
+</body>
+</html>
