@@ -46,6 +46,7 @@ npm test
 ```bash
 npx serve .
 ```
+
 Open the printed URL on your computer or phone (same Wi-Fi). Firebase needs `http://localhost` or `https`, so don't open `index.html` by double-clicking it.
 
 ## 4. Deploy on Vercel
